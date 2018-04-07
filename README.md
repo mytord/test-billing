@@ -41,10 +41,7 @@ docker-sync-stack start
 docker-compose exec php bin/console doctrine:migrations:migrate -n
 ```
 
-### 4. Open project
-Just go to [http://127.0.0.1](http://127.0.0.1)
-
-## Tests
+### 3. Run tests
 
 ```
 docker-compose exec php bin/phpunit -c phpunit.xml.dist
