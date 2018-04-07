@@ -16,7 +16,7 @@ Framework and helper libs:
 
 - Symfony 4
 - Doctrine
-- [4xxi/skeleton(https://github.com/4xxi/skeleton)]
+- [4xxi/skeleton](https://github.com/4xxi/skeleton)
 
 ## Installation
 
