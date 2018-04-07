@@ -20,6 +20,12 @@ Framework and helper libs:
 
 ## Installation
 
+### 0. Create configuration file and check it
+
+```
+cp .env.dist .env
+```
+
 ### 1. Start Containers
 On Linux:
 ```bash
@@ -32,7 +38,7 @@ docker-sync-stack start
 
 ### 2. Run migrations, install fixtures
 ```bash
-docker-compose exec php bin/console doctrine:migrations:migrate
+docker-compose exec php bin/console doctrine:migrations:migrate -n
 ```
 
 ### 4. Open project
