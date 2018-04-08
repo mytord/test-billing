@@ -1,6 +1,9 @@
 Billing app
 ==========
 
+[![Build Status](https://travis-ci.org/mytord/test-billing.svg?branch=master)](https://travis-ci.org/mytord/test-billing)
+
+
 Billing micro-service. 
 You can see usage examples at the end.
 
