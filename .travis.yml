@@ -1,3 +1,7 @@
 language: php
 php:
  - 7.1
+
+before_script: composer install --prefer-source --no-interaction
+
+script: bin/phpunit -c phpunit.xml.dist
