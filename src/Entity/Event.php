@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * Class Event.
@@ -20,6 +21,8 @@ class Event
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
+     *
+     * @Groups("wallet-read")
      */
     private $id;
 
@@ -27,6 +30,8 @@ class Event
      * @var int
      *
      * @ORM\Column(type="smallint")
+     *
+     * @Groups("wallet-read")
      */
     private $type;
 
@@ -34,6 +39,8 @@ class Event
      * @var int
      *
      * @ORM\Column(type="integer")
+     *
+     * @Groups("wallet-read")
      */
     private $amount;
 
@@ -49,6 +56,8 @@ class Event
      * @var \DateTime
      *
      * @ORM\Column(type="datetime")
+     *
+     * @Groups("wallet-read")
      */
     private $createdAt;
 

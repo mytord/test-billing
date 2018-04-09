@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * Class Wallet.
@@ -18,6 +19,8 @@ class Wallet
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
+     *
+     * @Groups("wallet-read")
      */
     private $id;
 
@@ -27,6 +30,8 @@ class Wallet
      * @var int
      *
      * @ORM\Column(type="integer")
+     *
+     * @Groups("wallet-read")
      */
     private $balance;
 
@@ -34,6 +39,8 @@ class Wallet
      * @var ArrayCollection|Event[]
      *
      * @ORM\OneToMany(targetEntity="App\Entity\Event", mappedBy="wallet", cascade={"persist"})
+     *
+     * @Groups("wallet-read")
      */
     private $events;
 

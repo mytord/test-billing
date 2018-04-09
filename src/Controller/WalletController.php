@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Wallet;
 use App\Form\Type\DepositRequestType;
 use App\Form\Type\TransferRequestType;
 use App\Form\Type\WithdrawalRequestType;
@@ -22,6 +23,21 @@ use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
  */
 class WalletController extends Controller
 {
+    /**
+     * @Route("/{id}")
+     * @Method("GET")
+     *
+     * @param Wallet $wallet
+     *
+     * @return JsonResponse
+     */
+    public function getWallet(Wallet $wallet): JsonResponse
+    {
+        return new JsonResponse(
+            $this->get('serializer')->normalize($wallet, null, ['groups' => ['wallet-read']])
+        );
+    }
+
     /**
      * @Route("/deposit")
      * @Method("POST")

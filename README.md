@@ -82,5 +82,13 @@ curl --request POST \
   --data 'sourceWalletId=1&recipientWalletId=2&amount=1500'
 ```
 
+### Get wallet object (with events)
+
+```
+curl --request GET \
+  --url http://127.0.0.1/2 \
+  --header 'Cache-Control: no-cache' \
+```
+
 - walletId, sourceWalletId, recipientWalletId - ID of user wallet (there are three test wallets with ids 1, 2, 3)
 - amount - Money amount in _cents_
